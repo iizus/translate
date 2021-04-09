@@ -10,7 +10,10 @@ def make_box():
 	box = gui.Multiline(size=box_size)
 	return box
 
+languages = ['choice 1', 'choice 2']
+
 layout = [
+	[],
     [make_box(), make_box()]
 ]
 
