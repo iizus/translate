@@ -5,11 +5,13 @@ width = 80
 height = 30
 
 box_size = (width, height)
-left_box = gui.Multiline(size=box_size)
-right_box = gui.Multiline(size=box_size)
+
+def make_box():
+	box = gui.Multiline(size=box_size)
+	return box
 
 layout = [
-    [left_box, right_box]
+    [make_box(), make_box()]
 ]
 
 window = gui.Window(title, layout)
