@@ -17,5 +17,3 @@ window = gui.Window(title, layout)
 while True:
 	event, values = window.read()
 	if event is None: break
-else:
-	window.close()
