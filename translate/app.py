@@ -1,7 +1,7 @@
 from chalice import Chalice
 app = Chalice(app_name='translate')
 
-import aws
+from chalicelib import aws
 from urllib import parse
 
 @app.route('/{text}', methods=['GET'])
