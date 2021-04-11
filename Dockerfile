@@ -8,3 +8,6 @@ RUN apt upgrade -y
 RUN apt install -y httpie
 
 RUN pip install chalice
+
+COPY translate/requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt
