@@ -33,6 +33,6 @@ def translate_to_english(text):
 
 def translate(text):
     translated_text, source_language = translate_to_japanese(text)
-    if source_language == JAPANESE:
+    if source_language != ENGLISH:
         translated_text, _ = translate_to_english(text)
     return translated_text
