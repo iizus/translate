@@ -11,14 +11,12 @@ from urllib import parse
 )
 def translate():
     request = app.current_request
-    # text = request.json_body
     text = request.raw_body
-    # dic = request.to_dict()
-    # text = str(text)
-    # text = parse.unquote(text)
-    # print(dic)
-    print(text.decode())
-    return text
+    translated_text = aws.translate(text.decode())
+    # translated_text = str(translated_text)
+    print(translated_text)
+    return translated_text
+    # return text
     # return text
     # text = str(text)
     # text = parse.quote(text)
